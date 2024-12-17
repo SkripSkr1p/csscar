@@ -1,0 +1,72 @@
+body {
+  background-image: url("1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #87cefa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.car {
+  width: 200px;
+  height: 70px;
+  background-color: #ff4500;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 50px;
+  animation: drive 5s cubic-bezier(0.86,0,0.07,1) forwards;
+}
+
+.car .roof {
+  width: 140px;
+  height: 60px;
+  background-color: #ff4500;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  border-radius: 8px;
+}
+
+.car .window {
+  width: 60px;
+  height: 30px;
+  background-color: #add8e6;
+  border-radius: 5px;
+  position: absolute;
+  top: -25px;
+  left: 35px;
+}
+
+.car .window.right {
+  left: 100px;
+}
+
+.car .wheel {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+}
+
+.car .wheel.left {
+  left: 30px;
+}
+
+.car .wheel.right {
+  right: 30px;
+}
+
+@keyframes drive {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: calc(100vw - 250px - 50px);
+  }
+}
